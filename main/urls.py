@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+
 
 urlpatterns = [
     # django admin
@@ -30,8 +32,13 @@ urlpatterns = [
     path('', include('pages.urls')),
     path("accounts/", include("accounts.url")),
     path("books/", include('books.urls')),
+
+    # api
     path("api/v1/", include("apis.urls")),
     path("api-auth/", include("rest_framework.urls")),
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("api/schema/redoc/", SpectacularRedocView.as_view(), name="redoc"),
+    path("api/schema/swagger-ui/", SpectacularSwaggerView.as_view(), name="swagger-ui"),
 ]
 
 

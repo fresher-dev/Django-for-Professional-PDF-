@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'rest_framework',
     'debug_toolbar',
+    'drf_spectacular',
 
     # local
     'accounts.apps.AccountsConfig',
@@ -159,4 +160,16 @@ def show_toolbar(request):
 
 DEBUG_TOOLBAR_CONFIG = {
     "SHOW_TOOLBAR_CALLBACK" : show_toolbar,
+}
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Book API Project",
+    "DESCRIPTION": "A sample book site  to learn about DRF",
+    "VERSION": "1.0.0",
 }
