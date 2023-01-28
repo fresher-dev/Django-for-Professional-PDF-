@@ -40,11 +40,13 @@ INSTALLED_APPS = [
 
     # thrid-party
     'crispy_forms',
+    'rest_framework',
 
     # local
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'books.apps.BooksConfig',
+    'apis.apps.ApisConfig',
 ]
 
 # django crispy forms

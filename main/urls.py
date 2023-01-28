@@ -29,6 +29,8 @@ urlpatterns = [
     path('', include('pages.urls')),
     path("accounts/", include("accounts.url")),
     path("books/", include('books.urls')),
+    path("api/v1/", include("apis.urls")),
+    path("api-auth/", include("rest_framework.urls")),
 ]
 
 
