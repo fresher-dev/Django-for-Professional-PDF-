@@ -38,11 +38,8 @@ INSTALLED_APPS = [
 
     # thrid-party
     'crispy_forms',
-<<<<<<< HEAD
     'rest_framework',
-=======
     'debug_toolbar',
->>>>>>> 4787c4a5c9a502622bdc37e6cb4253a9461ea1f4
 
     # local
     'accounts.apps.AccountsConfig',
